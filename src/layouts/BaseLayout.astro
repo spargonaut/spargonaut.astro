@@ -1,0 +1,26 @@
+---
+import '../styles/global.css';
+import Navigation from "../components/Navigation.astro";
+---
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>spargonaut</title>
+    </head>
+    <body>
+        <main class="wrapper">
+            <Navigation />
+            <div class="content">
+                <slot />
+            </div>
+            <footer class="footer">
+                <section class="container">
+                </section>
+            </footer>
+        </main>
+    </body>
+</html>

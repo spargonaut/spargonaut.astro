@@ -1,34 +1,12 @@
 ---
 import '../styles/global.css';
-import Navigation from "../components/Navigation.astro";
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>spargonaut</title>
-    </head>
-    <body>
-    <main class="wrapper">
-        <Navigation />
-        <div class="content">
-            <div class="content">
-                <section class="container list">
-                    <h1 class="title">About Me</h1>
-                    <h2>I'm constantly working on....   something</h2>
-                    <p>Right now I'm updating my blog</p>
-                    <p>... and my farmstand.</p>
-                </section>
-            </div>
-        </div>
-        <footer class="footer">
-            <section class="container">
-            </section>
-        </footer>
-    </main>
-    </body>
-</html>
+<BaseLayout>
+    <section class="container list">
+        <h1 class="title">About Me</h1>
+        <h2>I'm constantly working on....   something</h2>
+        <p>Right now I'm updating my blog</p>
+        <p>... and my farmstand.</p>
+    </section>
+</BaseLayout>
