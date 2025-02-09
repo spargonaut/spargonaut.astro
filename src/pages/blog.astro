@@ -8,8 +8,8 @@ const allPosts = Object.values(import.meta.glob('./blog_posts/*.md', { eager: tr
 
 <BaseLayout>
     <section class="container list">
-        <h1 class="title">Blog</h1>
-        <h2>mumblings, musings, rants and raves</h2>
+        <h1 class="title">Blog Posts</h1>
+        <h3>a bunch of mumblings, musings, rants and raves</h3>
         <ul>
             {allPosts.map((post: any) => {
                 return <BlogPostCard url={post.url} title={post.frontmatter.title}/>
