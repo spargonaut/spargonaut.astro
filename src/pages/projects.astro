@@ -1,0 +1,18 @@
+---
+import '../styles/global.css';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPostCard from "../components/BlogPostCard.astro";
+
+const allProjects = Object.values(import.meta.glob('./projects/*.md', { eager: true }));
+---
+<BaseLayout>
+    <section class="container list">
+        <h1 class="title">Projects</h1>
+        <h3>Things I've worked on</h3>
+        <ul>
+            {allProjects.map((post: any) => {
+                return <BlogPostCard url={post.url} title={post.frontmatter.title}/>
+            })}
+        </ul>
+    </section>
+</BaseLayout>
