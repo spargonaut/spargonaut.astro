@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../../layouts/MarkdownPostLayout.astro
 
 title: 'Get Gud Wit Git'
 pubDate: 2024-07-18

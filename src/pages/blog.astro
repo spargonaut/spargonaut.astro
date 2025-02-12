@@ -3,7 +3,7 @@ import '../styles/global.css';
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPostCard from "../components/BlogPostCard.astro";
 
-const allPosts = Object.values(import.meta.glob('./blog_posts/*.md', { eager: true }));
+const allPosts = Object.values(import.meta.glob('./blog/post/*.md', { eager: true }));
 ---
 
 <BaseLayout>
