@@ -26,6 +26,23 @@ pipeline {
             }
         }
 
+        stage('tag the index.html files with build info') {
+            steps {
+                script {
+                    def buildNumber = env.BUILD_NUMBER
+                    def buildDateTime = new Date().format("yyyy-MM-dd HH:mm:ss", TimeZone.getTimeZone('UTC')) // Date & time in UTC
+                    def shortCommitHash = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim() // Fetch short commit hash
+
+                    def appendString = "<!-- Build: ${buildNumber}, Date: ${buildDateTime}, Commit: ${shortCommitHash} -->"
+
+                    sh """
+                        find dist -name 'index.html' -exec sh -c 'echo "${appendString}" >> {}' \\;
+                        echo "Build information appended to all index.html files in dist directory."
+                    """
+                }
+            }
+        }
+
         stage('Create the Archive Name') {
             steps {
                 echo 'Creating the Archive Name...'
