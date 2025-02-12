@@ -74,6 +74,14 @@ pipeline {
                 }
             }
         }
+
+        stage('Archive the build artifact') {
+            steps {
+                script {
+                    archiveArtifacts artifacts: "${env.ARCHIVE_NAME}.tgz", fingerprint: true
+                }
+            }
+        }
     }
 
     post {
