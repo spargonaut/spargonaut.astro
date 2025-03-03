@@ -9,6 +9,15 @@ const allProjects = Object.values(import.meta.glob('./projects/*.md', { eager: t
     <section class="container list">
         <h1 class="title">Projects</h1>
         <h3>Things I've worked on</h3>
+        I have a track record of delivering quality software.
+        <br />
+        Working solo, or in a team.
+        <br />
+        Entire applications, or simply support projects.
+        <br />
+        Ensuring quality or improving developer productivity and their experience
+        <br />
+        Taking projects from idea to production is my passion.
         <ul>
             {allProjects.map((post: any) => {
                 return <BlogPostCard url={post.url} title={post.frontmatter.title}/>
