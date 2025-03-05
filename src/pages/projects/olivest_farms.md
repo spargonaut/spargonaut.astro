@@ -4,7 +4,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: "The Olivest Farms Tracker"
 description: 'Data Tracker for Home Hydroponic Systems'
 pubDate: 2025-02-28 (Closed Beta)
-tags: ["android", "mobile"]
+tags: ["web", "mobile"]
 ---
 
 The Olivest Farms Tracker is a Responsive Web Application that is used to easily track data from a 
