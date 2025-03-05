@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props;
                 <h1 class="title">{frontmatter.title}</h1>
                 <p><em>{frontmatter.description}</em></p>
                 <h2 class="date">Published on: {frontmatter.pubDate.toString().slice(0,10)}</h2>
-                <p>Written by {frontmatter.author}</p>
+                {frontmatter.author && <p>Written by {frontmatter.author}</p>}
             </header>
 
             {frontmatter.image?.url &&
