@@ -11,16 +11,16 @@ const allProjects = Object.values(import.meta.glob('./projects/*.md', { eager: t
         <h3>Things I've worked on</h3>
         I have a track record of delivering quality software.
         <br />
-        Working solo, or in a team.
+        Working solo or in a team.
         <br />
-        Entire applications, or simply support projects.
+        Entire applications or simply support projects.
         <br />
-        Ensuring quality or improving developer productivity and their experience
+        Ensuring quality or improving developer productivity and experience
         <br />
         Taking projects from idea to production is my passion.
         <br />
         <br />
-        These are just some of the projects I've worked on over the years through Spargonaut Software.
+        These are just a few of the projects I've worked on over the years through Spargonaut Software.
         <ul>
             {allProjects.map((post: any) => {
                 return <BlogPostCard url={post.url} title={post.frontmatter.title}/>
